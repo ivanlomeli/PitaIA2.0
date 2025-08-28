@@ -1,0 +1,31 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-pitaia {
+    @apply bg-gradient-to-r from-pitaia-red-500 to-pitaia-green-500 text-white px-6 py-3 rounded-xl font-semibold 
+           transition-all duration-300 transform hover:scale-105 
+           focus:outline-none focus:ring-4 focus:ring-pitaia-red-200;
+  }
+  
+  .input-pitaia {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-gray-200 
+           focus:border-pitaia-red-500 focus:ring-4 focus:ring-pitaia-red-100
+           transition-all duration-300 bg-white text-pitaia-gray-900;
+  }
+  
+  .card-pitaia {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100
+           backdrop-blur-sm p-8;
+  }
+}
